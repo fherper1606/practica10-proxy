@@ -5,7 +5,7 @@ Este proyecto consiste en el despliegue de una infraestructura de microservicios
 
 ## 2. Diagrama de la Arquitectura
 ![Diagrama de Arquitectura](https://raw.githubusercontent.com/fherper1606/practica10-proxy/main/Diagrama.png)
-*Nota: Asegúrate de subir una captura del croquis (puedes usar el del PDF) con el nombre 'diagrama.png' a la raíz de tu repositorio.*
+
 
 ## 3. Instrucciones de Despliegue
 Para clonar y levantar el entorno completo, ejecuta los siguientes comandos en tu terminal de Ubuntu:
