@@ -1,0 +1,29 @@
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - red_practica
+
+  api:
+    build: ./api
+    expose:
+      - "5000"
+    depends_on:
+      - redis
+    networks:
+      - red_practica
+
+  redis:
+    image: redis:alpine
+    networks:
+      - red_practica
+
+networks:
+  red_practica:
+    driver: bridge

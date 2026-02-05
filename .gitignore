@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.class
+venv/
+env/
+.env
+docker-compose.override.yml
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
