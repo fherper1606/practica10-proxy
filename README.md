@@ -15,6 +15,27 @@ Para clonar y levantar el entorno completo, ejecuta los siguientes comandos en t
 git clone https://github.com/fherper1606/practica10-proxy.git
 cd practica10-proxy
 
+# Descargar docker y docker compose
+# Actualiza paquetes e instala dependencias
+sudo apt update
+sudo apt install ca-certificates curl gnupg
+
+# Añade la clave GPG oficial
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Añade el repositorio a las fuentes de APT
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+
+# Instalar el plugin de Docker Compose
+sudo apt install docker-compose-plugin
+
+
 # Levantar el entorno con Docker Compose
 sudo docker compose up -d --build
 ```
